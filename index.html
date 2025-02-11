@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Когнитивни пристрастия</title>
+        <meta name="description" content="Научете за логическите заблуди и как да ги разпознавате.">
+        <meta name="keywords" content="когнитивни пристрастия, когнитивни заблуди, когнитивни склонности, критично мислене, аргументи, манипулация, рационално мислене">
+        <meta name="author" content="Иван Митев">
+        <link rel="icon" type="image/png" href="favicon-32x32.png">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://pristrastia.logi4no.com/">
+        <meta property="og:title" content="Логически заблуди">
+        <meta property="og:description" content="Научете за когнитивните пристрастия и как да ги разпознавате.">
+        <meta property="og:image" content="https://pristrastia.logi4no.com/clover-brain-facebook.jpg">
+        <!-- Twitter -->
+        <meta property="twitter:url" content="https://pristrastia.logi4no.com/">
+        <meta property="twitter:title" content="Логически заблуди">
+        <meta property="twitter:description" content="Научете за когнитивните пристрастия и как да ги разпознавате.">
+        <meta property="twitter:image" content="https://pristrastia.logi4no.com/clover-brain-twitter.jpg"">
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4NST4HZG30"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-4NST4HZG30');
+    </script>
+<body>
+    <header>
+        <div class="container">
+            <h1>Когнитивни пристрастия</h1>
+            <p>Когнитивното пристрастие/изкривяване е "грешка в мисленето", когато мозъкът ни понякога прави бързи, но неточни преценки.
+                <br>Запознай се с 24 от тях, популяризирани в <a href="https://yourbias.is/">Your Biases</a>. За по-изчерпателен списък, виж <a href=https://rationalwiki.org/wiki/List_of_cognitive_biases">Rational Wiki</a>.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="cards-container">
+            <!-- Cards will be dynamically loaded here -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Логиката е суперсила 💪 срещу всякакви заблуди или самозаблуди!
+                <br>Но с голямата сила идва и голямата отговорност!
+                <br>Преди да убеждаваш другите в правотата си, първо хубаво си помисли дали си обективно прав, а не си подлъган от собствените си 🧠 когнитивни пристрастия!</p>
+        </div>
+        <div class="license">
+            <p>
+                Съдържанието в сайта е под <a href="https://creativecommons.org/licenses/by/4.0/deed.bg" target="_blank">лиценз Creative Commons Признание 4.0 Международен</a>.
+            </p>
+            <p>
+                Ако имате въпроси и препоръки по съдържанието на страницата, можете да отворите дискусия в <a href="https://github.com/immitev/pristrastia/discussions" target="_blank">GitHub</a>.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function createValidId(cyrillicText) {
+            const transliterationMap = {
+                "а": "a", "б": "b", "в": "v", "г": "g", "д": "d", "е": "e", "ж": "zh", "з": "z", "и": "i",
+                "й": "y", "к": "k", "л": "l", "м": "m", "н": "n", "о": "o", "п": "p", "р": "r", "с": "s",
+                "т": "t", "у": "u", "ф": "f", "х": "h", "ц": "ts", "ч": "ch", "ш": "sh", "щ": "sht",
+                "ъ": "a", "ы": "y", "ь": "", "ю": "yu", "я": "ya",
+                "А": "A", "Б": "B", "В": "V", "Г": "G", "Д": "D", "Е": "E", "Ж": "Zh", "З": "Z", "И": "I",
+                "Й": "Y", "К": "K", "Л": "L", "М": "M", "Н": "N", "О": "O", "П": "P", "Р": "R", "С": "S",
+                "Т": "T", "У": "U", "Ф": "F", "Х": "H", "Ц": "Ts", "Ч": "Ch", "Ш": "Sh", "Щ": "Sht",
+                "Ъ": "A", "Ы": "Y", "Ь": "", "Ю": "Yu", "Я": "Ya"
+            };
+
+            // Replace each Cyrillic character with its corresponding Latin equivalent
+            const latinText = cyrillicText.split('').map(char => transliterationMap[char] || char).join('');
+
+            // Replace spaces with dashes, and ensure the result is lowercase
+            const validId = latinText.replace(/\s+/g, '-').toLowerCase();
+
+            return validId;
+        }
+
+        function scrollToAnchor() {
+            const hash = window.location.hash; // Get the fragment (e.g., #dvusmislie)
+            if (hash) {
+                const target = document.querySelector(hash);
+                if (target) {
+                    // Scroll to the element
+                    target.scrollIntoView({ behavior: 'smooth' });
+
+                    // Add a highlight effect
+                    target.classList.add('highlight-frame');
+                    setTimeout(() => {
+                        target.classList.remove('highlight-frame');
+                    }, 3000);
+                }
+            }
+        }
+
+
+        async function loadCards() {
+            const response = await fetch('data.json');
+            const data = await response.json();
+            const container = document.querySelector('.cards-container');
+
+            data.forEach(card => {
+                const cardElement = document.createElement('div');
+                cardElement.classList.add('card');
+                const cardId = createValidId(card.title);
+                cardElement.setAttribute('id', cardId); 
+                cardElement.innerHTML = `
+                    <h2 style="display: flex; justify-content: space-between; align-items: center;">
+                        ${card.title}
+                        <button onclick="navigator.share({url: window.location.origin + window.location.pathname + '#' + '${cardId}', 
+                                text: '${card.title}', 
+                                title: '${card.title}'})" 
+                            style="border: none; background: none; cursor: pointer; padding: 4px;" 
+                            title="Споделете линк към пристрастието '${card.title}'">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3"/>
+                                <circle cx="6" cy="12" r="3"/>
+                                <circle cx="18" cy="19" r="3"/>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div class="english">
+                        <a href="https://rationalwiki.org/wiki/${card.link}" class="wiki-link">${card.english}</a>
+                    </div>
+                    <p>${card.description}</p>
+                `;
+                container.appendChild(cardElement);
+            });
+
+            // Scroll after the dynamic content has been created
+            scrollToAnchor();
+        }
+
+        document.addEventListener('DOMContentLoaded', loadCards);
+
+        // Handle navigation clicks dynamically as well
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

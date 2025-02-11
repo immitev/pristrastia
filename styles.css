@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header a{
+    color: #fff;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header nav {
+    margin-top: 20px;
+}
+
+header nav input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+header nav select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.highlight-frame {
+    outline: 3px solid #ff9800;
+    outline-offset: 5px;
+    transition: outline 0.3s ease-in-out;
+}
+
+/* Карти със заблуди */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    justify-content: space-around;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+    transition: transform 0.2s;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.card .english {
+    font-size: 0.75rem; /* Smaller font size */
+    color: #555; /* Neutral text color for better readability */
+    line-height: 1;
+    padding-bottom: 8px;
+}
+
+.card .wiki-link{
+    color: #f38702;
+}
+
+.card .example {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #ff9800;
+}
+
+.card .explanation {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #ff4800;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.license {
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #f09b1d; /* Dark gray text for readability */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Spacing inside the box */
+    margin: 16px 0; /* Space around the license section */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .license a {
+    color: #f58404; /* Blue links */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .license a:hover {
+    text-decoration: underline;
+  }
+  
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
