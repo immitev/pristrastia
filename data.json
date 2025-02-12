@@ -7,27 +7,57 @@
     },
     {
         "title": "Необратими загуби",
-        "description": "Продължавате с нещо само защото вече сте вложили ресурси в него, въпреки че това може да не е най-доброто решение.",
-        "link": "sunk-cost-fallacy",
+        "description": "Продължавате с нещо само защото вече сте вложили ресурси в него, въпреки че това може да не е най_доброто решение.",
+        "link": "sunk_cost_fallacy",
         "english": "Sunk Cost Fallacy"
+    },
+    {
+        "title": "Евристика на наличността",
+        "description": "Предпочитате информация, която е леснодостъпна в съзнанието ви, вместо да оцените всички факти обективно.",
+        "link": "availability_heuristic",
+        "english": "Availability Heuristic"
+    },
+    {
+        "title": "Проклятие на знанието",
+        "description": "Трудно ви е да си представите какво е да не знаете нещо, което вече сте научили.",
+        "link": "curse_of_knowledge",
+        "english": "Curse of Knowledge"
+    },
+    {
+        "title": "Склонност за потвърждаване",
+        "description": "Склонни сте да търсите и вярвате само на информация, която подкрепя вашите съществуващи убеждения.",
+        "link": "confirmation_bias",
+        "english": "Confirmation Bias"
+    },
+    {
+        "title": "Пристрастие към вярванията",
+        "description": "Склонни сте да приемате аргументи за верни или неверни въз основа на това дали заключението им съвпада с вашите съществуващи убеждения, а не на тяхната логическа стойност.",
+        "link": "belief_bias",
+        "english": "Belief Bias"
+    },
+    {
+        "title": "Уклон към себичност",
+        "description": "Приписвате успехите си на собствените си способности и усилия, а неуспехите – на външни фактори, извън вашия контрол.",
+        "link": "self_serving_bias",
+        "english": "Self-Serving Bias"
+    },
+    {
+        "title": "Обратен ефект",
+        "description": "Когато ви представят доказателства, които противоречат на вашите убеждения, те могат да ви направят още по-убедени в първоначалната си позиция, вместо да я промените.",
+        "link": "backfire_effect",
+        "english": "Backfire Effect"
     },
     {
         "title": "Ефект на Дънинг-Крюгер",
         "description": "Хората с малко познания често надценяват компетентността си, докато експертите могат да я подценяват.",
-        "link": "dunning-kruger-effect",
+        "link": "dunning_kruger_effect",
         "english": "Dunning-Kruger Effect"
     },
     {
         "title": "Оптимистичен уклон",
         "description": "Склонни сте да вярвате, че положителните събития са по-вероятни за вас, отколкото за другите.",
-        "link": "optimism-bias",
+        "link": "optimism_bias",
         "english": "Optimism Bias"
-    },
-    {
-        "title": "Склонност за потвърждаване",
-        "description": "Склонни сте да търсите и вярвате само на информация, която подкрепя вашите съществуващи убеждения.",
-        "link": "confirmation-bias",
-        "english": "Confirmation Bias"
     },
     {
         "title": "Групово мислене",
@@ -38,79 +68,67 @@
     {
         "title": "Ефект на ореола",
         "description": "Ако харесвате един аспект от някого или нещо, сте склонни да надценявате и другите му характеристики.",
-        "link": "halo-effect",
+        "link": "halo_effect",
         "english": "Halo Effect"
     },
     {
         "title": "Негативен уклон",
         "description": "Отдавате повече значение на негативната информация, отколкото на позитивната.",
-        "link": "negativity-bias",
+        "link": "negativity_bias",
         "english": "Negativity Bias"
     },
     {
         "title": "Страх от загуба",
         "description": "Страхът от загуба ви влияе повече, отколкото възможността за печалба.",
-        "link": "loss-aversion",
+        "link": "loss_aversion",
         "english": "Loss Aversion"
-    },
-    {
-        "title": "Проклятие на знанието",
-        "description": "Трудно ви е да си представите какво е да не знаете нещо, което вече сте научили.",
-        "link": "curse-of-knowledge",
-        "english": "Curse of Knowledge"
-    },
-    {
-        "title": "Евристика на наличността",
-        "description": "Предпочитате информация, която е леснодостъпна в съзнанието ви, вместо да оцените всички факти обективно.",
-        "link": "availability-heuristic",
-        "english": "Availability Heuristic"
     },
     {
         "title": "Фундаментална атрибутивна грешка",
         "description": "Склонни сте да обяснявате действията на другите с техния характер, а не с обстоятелствата.",
-        "link": "fundamental-attribution-error",
+        "link": "fundamental_attribution_error",
         "english": "Fundamental Attribution Error"
     },
     {
         "title": "Ефект на самоувереността",
         "description": "Хората често надценяват собствените си познания и способности.",
-        "link": "overconfidence-effect",
+        "link": "overconfidence_effect",
         "english": "Overconfidence Effect"
     },
     {
         "title": "Илюзия за контрол",
         "description": "Вярвате, че имате повече контрол върху нещата, отколкото в действителност.",
-        "link": "illusion-of-control",
+        "link": "illusion_of_control",
         "english": "Illusion of Control"
     },
     {
         "title": "Песимизъм към бъдещето",
-        "description": "Смятате, че миналото е било по-добро, отколкото реално е било, и че бъдещето ще бъде по-лошо.",
+        "description": "Смятате, че миналото е било по_добро, отколкото реално е било, и че бъдещето ще бъде по_лошо.",
         "link": "declinism",
         "english": "Declinism"
     },
     {
         "title": "Ефект на познатостта",
         "description": "Предпочитате неща, с които сте запознати, просто защото са ви познати.",
-        "link": "mere-exposure-effect",
+        "link": "mere_exposure_effect",
         "english": "Mere Exposure Effect"
     },
     {
         "title": "Илюзия за прозрачност",
-        "description": "Смятате, че другите разбират вашите емоции и мисли по-добре, отколкото реално го правят.",
-        "link": "illusion-of-transparency",
+        "description": "Смятате, че другите разбират вашите емоции и мисли по_добре, отколкото реално го правят.",
+        "link": "illusion_of_transparency",
         "english": "Illusion of Transparency"
     },
     {
         "title": "Хипотеза за справедливия свят",
         "description": "Вярвате, че хората получават това, което заслужават, и че светът е справедлив.",
-        "link": "just-world-hypothesis",
+        "link": "just_world_hypothesis",
         "english": "Just-World Hypothesis"
     },
     {
         "title": "Ефект на страничния наблюдател",
-        "description": "Хората са по-малко склонни да окажат помощ, ако има и други свидетели.",
-        "link": "bystander-effect",
+        "description": "Хората са по_малко склонни да окажат помощ, ако има и други свидетели.",
+        "link": "bystander_effect",
         "english": "Bystander Effect"
     },
     {
