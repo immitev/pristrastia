@@ -108,18 +108,16 @@ header nav select {
     color: #f38702;
 }
 
-.card .example {
+.card .tip {
     margin: 10px 0;
     padding: 10px;
     background: #f9f9f9;
-    border-left: 4px solid #ff9800;
 }
 
-.card .explanation {
+.card .summary {
     margin: 10px 0;
     padding: 10px;
-    background: #f9f9f9;
-    border-left: 4px solid #ff4800;
+    border-left: 4px solid #b7b3c0;
 }
 
 /* Footer */

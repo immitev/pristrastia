@@ -35,7 +35,7 @@
         <div class="container">
             <h1>Когнитивни пристрастия</h1>
             <p>Когнитивното пристрастие/изкривяване е "грешка в мисленето", когато мозъкът ни понякога прави бързи, но неточни преценки.
-                <br>Запознай се с 24 от тях, популяризирани в <a href="https://yourbias.is/">Your Biases</a>. За по-изчерпателен списък, виж <a href=https://rationalwiki.org/wiki/List_of_cognitive_biases">Rational Wiki</a>.
+                <br>Запознай се с 24 от тях, популяризирани в <a href="https://yourbias.is/">Your Biases</a>. За по-изчерпателен списък, виж <a href=https://thedecisionlab.com/biases">Decisions Lab</a>.
             </p>
         </div>
     </header>
@@ -130,9 +130,15 @@
                         </button>
                     </h2>
                     <div class="english">
-                        <a href="https://rationalwiki.org/wiki/${card.link}" class="wiki-link">${card.english}</a>
+                        <a href="https://thedecisionlab.com/biases/${card.link}" class="wiki-link">${card.english}</a>
                     </div>
                     <p>${card.description}</p>
+                    <div class="summary">
+                        ${card.summary}
+                    </div>
+                    <div class="tip">
+                        💊 ${card.tip}
+                    </div>
                 `;
                 container.appendChild(cardElement);
             });
